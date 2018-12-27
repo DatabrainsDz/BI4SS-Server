@@ -2,38 +2,55 @@
 
 namespace Core;
 class Router {
-   protected $routes = [];
+   protected $routes = [
+       'POST' => [],
+       'GET' => [],
+       'PUT' => [],
+       'DELETE' => [],
+   ];
    protected $params = [];
 
-   public function add($route, $params = [])
+   public function convert2regex($route, $params = [])
    {
       // convert the route to a regex: escape '/'
       $route = preg_replace('/\//', '\\/', $route);
-
-      // convert variables ex: {controller}
-      $route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z-]+)', $route);
 
       // convert custom variables like id or maybe lang
       $route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?P<\1>\2)', $route);
 
       // add start ^ and the end $;
       $route = '/^' . $route . '$/i';
+        return $route;
 
-      $this->routes[$route] = $params;
    }
+   public function post($route, $params = []) {
+        $route = $this->convert2regex($route);
+       $this->routes['POST'][$route] = $params;
 
-   public function getRoutes()
-   {
-      return $this->routes;
+   }
+   public function get($route, $params = []) {
+        $route = $this->convert2regex($route);
+       $this->routes['GET'][$route] = $params;
+
+   }
+   public function put($route, $params = []) {
+        $route = $this->convert2regex($route);
+       $this->routes['PUT'][$route] = $params;
+
+   }
+   public function delete($route, $params = []) {
+        $route = $this->convert2regex($route);
+       $this->routes['DELETE'][$route] = $params;
+
    }
 
    /*
     * if match the url so add the params of url to params of Router
     * match url with table of routes
     */
-   public function match($url)
+   public function match($url, $request_type)
    {
-      foreach ($this->routes as $route => $params) {
+      foreach ($this->routes[$request_type] as $route => $params) {
          if (preg_match($route, $url, $matches)) {
             foreach ($matches as $key => $match) {
                if (is_string($key)) {
@@ -47,10 +64,15 @@ class Router {
       return false;
    }
 
-   public function dispatch($url)
+    /**
+     * @param $url
+     * @param $request_type
+     * @throws \Exception
+     */
+    public function dispatch($url, $request_type)
    {
       $url = $this->removeQueryStringVariables($url);
-      if ($this->match($url)) {
+      if ($this->match($url, $request_type)) {
          $controller = $this->params["controller"];
          $controller = $this->convertToStudlyCaps($controller);
          $controller = $this->getNamespace() . $controller;

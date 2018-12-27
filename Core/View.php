@@ -13,10 +13,9 @@ class View {
     * return void
     */
    public static function render($view, $data = []) {
-      extract($data, EXTR_SKIP);
-
       $file = "../App/Views/$view";
       if (is_readable($file)) {
+          header('Content-type: application/json');
          require $file;
       } else {
          throw new \Exception("$file not found");

@@ -11,12 +11,16 @@ error_reporting(E_ALL);
 set_error_handler('Core\Error::errorHandler');
 set_exception_handler('Core\Error::exceptionHandler');
 
+/** @var \Core\Router $router */
 $router = new Core\Router();
 
-$router->add('', ['controller' => 'Home', 'action' => 'index']);
+// router with controller: Profile, Id: dynamic, Action: Index and the GET request
+$router->get('profile/{id:\d+}', ['controller' => 'Profile', 'action' => 'index']);
+
+// router with controller: Profile, Action: Index and the POST request
+$router->post('profile', ['controller' => 'Profile', 'action' => 'index']);
 
 
 
-//var_dump($router->getRoutes());
 $url = rtrim($_SERVER['QUERY_STRING'], '/');
-$router->dispatch($url);
+$router->dispatch($url, $_SERVER['REQUEST_METHOD']);
