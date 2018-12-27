@@ -12,7 +12,7 @@ class Home extends Controller {
          'title'  => 'Home',
          'colors' => ['red', 'green', 'blue'],
       ];
-      View::renderTemplate("Home/index.php", $data);
+      View::render("Home/index.php", $data);
    }
 
 
