@@ -1,0 +1,12 @@
+[27-May-2018 18:00:48 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: postssss'
+Stack trace:#0 C:\xampp\htdocs\mvc_routing\public\index.php(28): Core\Router->dispatch('postssss')
+#1 {main}
+Throw in 'C:\xampp\htdocs\mvc_routing\Core\Router.php' on line 70
+----------------------------------------------------------
+[27-May-2018 18:00:54 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: posss'
+Stack trace:#0 C:\xampp\htdocs\mvc_routing\public\index.php(28): Core\Router->dispatch('posss')
+#1 {main}
+Throw in 'C:\xampp\htdocs\mvc_routing\Core\Router.php' on line 70
+----------------------------------------------------------

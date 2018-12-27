@@ -1,0 +1,6 @@
+[01-Jun-2018 18:11:27 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: h'
+Stack trace:#0 C:\xampp\htdocs\mvc_routing\public\index.php(27): Core\Router->dispatch('h')
+#1 {main}
+Throw in 'C:\xampp\htdocs\mvc_routing\Core\Router.php' on line 75
+----------------------------------------------------------

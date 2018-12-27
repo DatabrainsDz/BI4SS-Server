@@ -1,0 +1,12 @@
+[21-Sep-2018 15:59:59 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: App'
+Stack trace:#0 C:\xampp\htdocs\mvc_routing\public\index.php(27): Core\Router->dispatch('App')
+#1 {main}
+Throw in 'C:\xampp\htdocs\mvc_routing\Core\Router.php' on line 75
+----------------------------------------------------------
+[21-Sep-2018 16:01:18 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: App'
+Stack trace:#0 C:\xampp\htdocs\mvc_routing\public\index.php(27): Core\Router->dispatch('App')
+#1 {main}
+Throw in 'C:\xampp\htdocs\mvc_routing\Core\Router.php' on line 75
+----------------------------------------------------------
