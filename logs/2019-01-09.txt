@@ -1,0 +1,6 @@
+[09-Jan-2019 12:02:07 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: profile'
+Stack trace:#0 C:\xampp\htdocs\databrains\public\index.php(26): Core\Router->dispatch('profile', 'GET')
+#1 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Router.php' on line 96
+----------------------------------------------------------

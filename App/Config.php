@@ -22,7 +22,7 @@ class Config {
     * Database name
     * @var String
     */
-   const DB_NAME = 'mvc_routing';
+   const DB_NAME = 'dwh_test';
 
    /**
     * Database user
@@ -40,6 +40,6 @@ class Config {
     * show or hide errors message on screen
     * @var boolean
     */
-   const SHOW_ERR = false;
+   const SHOW_ERR = true;
 
 }

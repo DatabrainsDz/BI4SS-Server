@@ -1,0 +1,41 @@
+[10-Jan-2019 12:36:23 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: years/all'
+Stack trace:#0 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('years/all', 'POST')
+#1 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Router.php' on line 96
+----------------------------------------------------------
+[10-Jan-2019 12:36:33 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Method all not found in controller App\Controllers\Years'
+Stack trace:#0 C:\xampp\htdocs\databrains\Core\Router.php(86): Core\Controller->__call('all', Array)
+#1 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('years/all', 'GET')
+#2 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Controller.php' on line 31
+----------------------------------------------------------
+[10-Jan-2019 12:44:22 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: hello'
+Stack trace:#0 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('hello', 'GET')
+#1 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Router.php' on line 96
+----------------------------------------------------------
+[10-Jan-2019 13:02:46 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: '
+Stack trace:#0 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('', 'GET')
+#1 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Router.php' on line 96
+----------------------------------------------------------
+[10-Jan-2019 13:03:17 Europe/Berlin] 
+Uncaught exception: 'Exception'Message: 'Not Route Found for url: '
+Stack trace:#0 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('', 'GET')
+#1 {main}
+Throw in 'C:\xampp\htdocs\databrains\Core\Router.php' on line 96
+----------------------------------------------------------
+[10-Jan-2019 13:32:29 Europe/Berlin] 
+Uncaught exception: 'ErrorException'Message: 'Use of undefined constant years - assumed 'years' (this will throw an Error in a future version of PHP)'
+Stack trace:#0 C:\xampp\htdocs\databrains\App\Controllers\Years.php(31): Core\Error::errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 [internal function]: App\Controllers\Years->allAction()
+#2 C:\xampp\htdocs\databrains\Core\Controller.php(27): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\databrains\Core\Router.php(86): Core\Controller->__call('all', Array)
+#4 C:\xampp\htdocs\databrains\public\index.php(28): Core\Router->dispatch('years/all', 'GET')
+#5 {main}
+Throw in 'C:\xampp\htdocs\databrains\App\Controllers\Years.php' on line 31
+----------------------------------------------------------
