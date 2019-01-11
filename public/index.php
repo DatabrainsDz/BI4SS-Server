@@ -14,13 +14,12 @@ set_exception_handler('Core\Error::exceptionHandler');
 /** @var \Core\Router $router */
 $router = new Core\Router();
 
-// router with controller: Years, Id: dynamic, Action: Index and the GET request
-$router->get('profile/{id:\d+}', ['controller' => 'Years', 'action' => 'index']);
-
+// Get data for all years
 $router->get('years/all', ['controller' => 'Years', 'action' => 'all']);
 
-// router with controller: Years, Action: Index and the POST request
-$router->post('profile', ['controller' => 'Years', 'action' => 'index']);
+// Get data for specific year
+$router->get('years/{year:\d+}', ['controller' => 'Years', 'action' => 'byYear']);
+
 
 
 
