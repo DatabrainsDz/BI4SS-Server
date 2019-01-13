@@ -20,8 +20,9 @@ $router->get('years/all', ['controller' => 'Years', 'action' => 'all']);
 // Get data for specific year
 $router->get('years/{year:\d+}', ['controller' => 'Years', 'action' => 'byYear']);
 
-
-
+// Get data for subject
+$router->get('AdmittedAdjourned/{year:\d+}', ['controller' => 'AdmittedAdjourned', 'action' => 'byLevel']);
+// localhost/subjects/2014 {level}
 
 $url = rtrim($_SERVER['QUERY_STRING'], '/');
 $router->dispatch($url, $_SERVER['REQUEST_METHOD']);
