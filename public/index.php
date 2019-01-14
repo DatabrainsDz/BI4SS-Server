@@ -22,7 +22,9 @@ $router->get('years/{year:\d+}', ['controller' => 'Years', 'action' => 'byYear']
 
 // Get data for subject
 $router->get('AdmittedAdjourned/{year:\d+}', ['controller' => 'AdmittedAdjourned', 'action' => 'byLevel']);
+
 // localhost/subjects/2014 {level}
+$router->get('subjects/{year:\d+}', ['controller' => 'Subjects', 'action' => 'all']);
 
 $url = rtrim($_SERVER['QUERY_STRING'], '/');
 $router->dispatch($url, $_SERVER['REQUEST_METHOD']);

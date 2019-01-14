@@ -22,7 +22,7 @@ class Years extends Controller {
         View::render("Years/all.php", $data);
     }
 
-    public function byYear()
+    public function byYearAction()
     {
         $year = $this->route_params['year'];
         $dataByGender = Year::byGender($year);

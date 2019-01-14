@@ -7,7 +7,7 @@ use Core\Controller;
 use Core\View;
 
 class AdmittedAdjourned extends Controller {
-    public function byLevel()
+    public function byLevelAction()
     {
         $year = $this->route_params['year'];
         $current_year = $_GET['current_year'];
@@ -15,7 +15,6 @@ class AdmittedAdjourned extends Controller {
         $dataByGender = AdmittedAdjournedM::byGender($year, $current_year, $level);
         $dataByCity = AdmittedAdjournedM::byCity($year, $current_year, $level);
         $dataByNationality = AdmittedAdjournedM::ByNationality($year, $current_year, $level);
-        //die(var_dump($this->refactor_data($dataByGender)));
         $data = [
             "byGender" => $this->refactor_data($dataByGender),
             "byCity" => $this->refactor_data($dataByCity),
