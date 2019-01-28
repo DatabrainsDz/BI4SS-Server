@@ -82,13 +82,19 @@ class Subjects extends Controller {
     private function refactor_associations($data)
     {
         $refactored_data = [];
+        $result = [];
         foreach ($data as $d) {
             $refactored_data [$d['id_subject_one']] = [];
         }
-//        die(var_dump($refactored_data));
         foreach ($data as $d) {
             array_push($refactored_data[$d['id_subject_one']], $d['id_subject_two']);
         }
-        return $refactored_data;
+        foreach ($refactored_data as $key => $val) {
+            array_push($result, [
+                "subject" => $key,
+                "relatedTo" => $val,
+            ]);
+        }
+        return $result;
     }
 }
