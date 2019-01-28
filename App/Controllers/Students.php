@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Student;
 use Core\Controller;
+use Core\View;
 
 class Students extends Controller {
 
@@ -14,9 +15,8 @@ class Students extends Controller {
             'current_year' => $_GET['current_year'],
             'level' => $_GET['level'],
         ];
-
         $result = Student::auth($inputData);
-        die(var_dump($result));
+        View::render("Years/all.php", $result);
     }
 
 }

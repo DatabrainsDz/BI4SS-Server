@@ -21,7 +21,7 @@ class Student extends Model {
             $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
             $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
             $stmt->execute();
-            $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            $results = $stmt->fetch(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
             echo $e->getMessage();
         }

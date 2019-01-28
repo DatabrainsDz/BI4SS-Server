@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4851fd29-9970-4fed-ab97-19cd9fd3ba8f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/Subjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/Subjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/Students.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/Students.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Student.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
           <entry key="htaccess" value="3" />
           <entry key="json" value="4" />
           <entry key="lock" value="1" />
-          <entry key="php" value="267" />
+          <entry key="php" value="272" />
           <entry key="sql" value="1" />
           <entry key="wilaya" value="1" />
           <entry key="xml" value="1" />
@@ -60,7 +61,7 @@
         <counts>
           <entry key="Database Element" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="PHP" value="267" />
+          <entry key="PHP" value="272" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
           <entry key="htaccess" value="3" />
@@ -70,13 +71,13 @@
         <counts>
           <entry key="dummy" value="13" />
           <entry key="htaccess" value="10" />
-          <entry key="php" value="6545" />
+          <entry key="php" value="6550" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="6346" />
+          <entry key="PHP" value="6351" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="SQL" value="199" />
           <entry key="htaccess" value="10" />
@@ -95,12 +96,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Controllers/Subjects.php">
+        <entry file="file://$PROJECT_DIR$/App/Controllers/Students.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+            <state relative-caret-position="395">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
-                <element signature="e#36#59#0#PHP" expanded="true" />
+                <element signature="e#35#58#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,11 +156,11 @@
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/App/Controllers/AdmittedAdjourned.php" />
         <option value="$PROJECT_DIR$/App/Controllers/Users.php" />
-        <option value="$PROJECT_DIR$/App/Controllers/Students.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/App/Models/Student.php" />
         <option value="$PROJECT_DIR$/App/Models/Subject.php" />
         <option value="$PROJECT_DIR$/App/Controllers/Subjects.php" />
+        <option value="$PROJECT_DIR$/App/Models/Student.php" />
+        <option value="$PROJECT_DIR$/App/Controllers/Students.php" />
       </list>
     </option>
   </component>
@@ -311,12 +312,12 @@
       <workItem from="1547385831214" duration="5262000" />
       <workItem from="1547498310027" duration="4188000" />
       <workItem from="1548667202968" duration="6434000" />
-      <workItem from="1548688183185" duration="1263000" />
+      <workItem from="1548688183185" duration="1631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73754000" />
+    <option name="totallyTimeSpent" value="74122000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,20 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controllers/Students.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Models/Student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Models/Subject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -548,10 +535,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Controllers/Subjects.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        <state relative-caret-position="291">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="77" selection-end-column="49" />
           <folding>
             <element signature="e#36#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Models/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controllers/Students.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#35#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
