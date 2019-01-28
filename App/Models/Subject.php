@@ -90,4 +90,28 @@ class Subject extends Model {
         return $results;
 
     }
+
+    public static function getAssociations($data)
+    {
+        $results = [];
+        try {
+            $db = static::getDB();
+            $stmt = $db->prepare("SELECT * from subjectAssociations
+                                            WHERE id_subject_one IN (SELECT DISTINCT id_course
+                                             FROM course
+                                             WHERE year = :current_year
+                                               AND branch_level = :level
+                                               AND semester = :semester)"
+            );
+            $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
+            $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
+            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_STR);
+            $stmt->execute();
+            $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\PDOException $e) {
+            echo $e->getMessage();
+        }
+        return $results;
+
+    }
 }

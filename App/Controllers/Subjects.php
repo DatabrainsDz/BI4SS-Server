@@ -39,7 +39,7 @@ class Subjects extends Controller {
         $response = [
             'title' => "I don't know",
             'status' => 200,
-            'data' => [0 => $data],
+            'data' => $data,
         ];
         View::render("Years/all.php", $response);
     }
@@ -55,6 +55,38 @@ class Subjects extends Controller {
             $refactored_data[$d[$keys[0]]] = empty($refactored_data[$d[$keys[0]]]) ? [] : $refactored_data[$d[$keys[0]]];
             $refactored_data[$d[$keys[0]]][$d[$keys[1]]] = $d[$keys[2]];
 
+        }
+        return $refactored_data;
+    }
+
+    public function associationAction()
+    {
+        $inputData = [
+            "current_year" => $_GET['current_year'],
+            "level" => $_GET['level'],
+            "semester" => $_GET['semester'],
+        ];
+        $result = Subject::getAssociations($inputData);
+//        die(var_dump($result));
+//        die(var_dump($this->refactor_associations($result)));
+        $response = [
+            'title' => "I don't know",
+            'status' => 200,
+            'data' => $this->refactor_associations($result),
+        ];
+        View::render("Years/all.php", $response);
+    }
+
+
+    private function refactor_associations($data)
+    {
+        $refactored_data = [];
+        foreach ($data as $d) {
+            $refactored_data [$d['id_subject_one']] = [];
+        }
+//        die(var_dump($refactored_data));
+        foreach ($data as $d) {
+            array_push($refactored_data[$d['id_subject_one']], $d['id_subject_two']);
         }
         return $refactored_data;
     }
