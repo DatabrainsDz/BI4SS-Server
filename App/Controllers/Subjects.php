@@ -22,6 +22,7 @@ class Subjects extends Controller {
             "current_year" => $_GET['current_year'],
             "level" => $_GET['level'],
             "semester" => $_GET['semester'],
+            "semester2" => $_GET['semester2'],
             "type" => " > 10",
         ];
         if ($_GET['level'] == 0) {

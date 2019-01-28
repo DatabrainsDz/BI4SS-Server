@@ -10,6 +10,7 @@ class Subject extends Model {
 
     public static function byCity($data)
     {
+        $semester2 = empty($data['semester2']) ? 0 : $data['semester2'];
         $results = [];
         try {
             $db = static::getDB();
@@ -22,12 +23,13 @@ class Subject extends Model {
                                             AND course.id_course = result.id_course 
                                             AND student.bac_wilaya = wilaya.id_wilaya
                                             AND average {$data['type']} 
-                                            AND course.semester = :semester GROUP BY course.id_course, bac_wilaya;"
+                                            AND course.semester IN(:semester, :semester2) GROUP BY course.id_course, bac_wilaya;"
             );
             $stmt->bindValue(':year', $data['year'], \PDO::PARAM_STR);
             $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
             $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
-            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_STR);
+            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_INT);
+            $stmt->bindValue(':semester2', $data['semester2'], \PDO::PARAM_INT);
             $stmt->execute();
             $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
@@ -38,6 +40,7 @@ class Subject extends Model {
 
     public static function ByNationality($data)
     {
+        $semester2 = empty($data['semester2']) ? 0 : $data['semester2'];
         $results = [];
         try {
             $db = static::getDB();
@@ -49,12 +52,13 @@ class Subject extends Model {
                                             AND student.study_level = :level 
                                             AND course.id_course = result.id_course 
                                             AND average {$data['type']} 
-                                            AND course.semester = :semester GROUP BY course.id_course, nationality;"
+                                            AND course.semester IN(:semester, :semester2) GROUP BY course.id_course, nationality;"
             );
             $stmt->bindValue(':year', $data['year'], \PDO::PARAM_STR);
             $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
             $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
-            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_STR);
+            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_INT);
+            $stmt->bindValue(':semester2', $data['semester2'], \PDO::PARAM_INT);
             $stmt->execute();
             $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
@@ -76,12 +80,13 @@ class Subject extends Model {
                                             AND student.study_level = :level 
                                             AND course.id_course = result.id_course 
                                             AND average {$data['type']} 
-                                            AND course.semester = :semester GROUP BY course.id_course, gender;"
+                                            AND course.semester IN (:semester, :semester2) GROUP BY course.id_course, gender;"
             );
             $stmt->bindValue(':year', $data['year'], \PDO::PARAM_STR);
             $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
             $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
-            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_STR);
+            $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_INT);
+            $stmt->bindValue(':semester2',$data['semester2'], \PDO::PARAM_INT);
             $stmt->execute();
             $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
