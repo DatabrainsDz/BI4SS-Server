@@ -25,9 +25,10 @@ $router->get('AdmittedAdjourned/{year:\d+}', ['controller' => 'AdmittedAdjourned
 
 // localhost/subjects/2014 {level}
 $router->get('subjects/{year:\d+}', ['controller' => 'Subjects', 'action' => 'all']);
-
-
+// localhost/subjects/associations
 $router->get('subjects/association', ['controller' => 'Subjects', 'action' => 'association']);
+
+$router->get('students/auth', ['controller' => 'Students', 'action' => 'auth']);
 
 $url = rtrim($_SERVER['QUERY_STRING'], '/');
 $router->dispatch($url, $_SERVER['REQUEST_METHOD']);

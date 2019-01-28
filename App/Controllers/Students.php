@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Student;
 use Core\Controller;
 
 class Students extends Controller {
