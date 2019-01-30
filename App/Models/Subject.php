@@ -18,6 +18,7 @@ class Subject extends Model {
                                             WHERE student.scholar_year = :year 
                                             AND student.scholar_year = result.scholar_year 
                                             AND student.id_student = result.id_student 
+					    AND course.year = student.current_year
                                             AND student.current_year = :current_year 
                                             AND student.study_level = :level 
                                             AND course.id_course = result.id_course 
@@ -48,6 +49,7 @@ class Subject extends Model {
                                             WHERE student.scholar_year = :year 
                                             AND student.scholar_year = result.scholar_year 
                                             AND student.id_student = result.id_student 
+					    AND course.year = student.current_year
                                             AND student.current_year = :current_year 
                                             AND student.study_level = :level 
                                             AND course.id_course = result.id_course 
@@ -76,6 +78,7 @@ class Subject extends Model {
                                             WHERE student.scholar_year = :year 
                                             AND student.scholar_year = result.scholar_year 
                                             AND student.id_student = result.id_student 
+					    AND course.year = student.current_year
                                             AND student.current_year = :current_year 
                                             AND student.study_level = :level 
                                             AND course.id_course = result.id_course 
