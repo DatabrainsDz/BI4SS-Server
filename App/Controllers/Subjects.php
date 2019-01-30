@@ -45,6 +45,23 @@ class Subjects extends Controller {
         View::render("Years/all.php", $response);
     }
 
+    public function infoAction()
+    {
+        $inputRequest = [
+            "level" => $_GET['level'],
+            "scholar_year" => $_GET['scholar_year'],
+            "current_year" => $_GET['current_year'],
+        ];
+
+        $result = Subject::getSubjects($inputRequest);
+        $response = [
+            'title' => "I don't know",
+            'status' => 200,
+            'data' => $this->refactor_info_subjects($result),
+        ];
+        View::render("Years/all.php", $response);
+
+    }
 
     private function refactor_data($data)
     {
@@ -96,5 +113,14 @@ class Subjects extends Controller {
             ]);
         }
         return $result;
+    }
+
+    private function refactor_info_subjects($array)
+    {
+        $refactored_data = [];
+        foreach ($array as $arr) {
+            array_push($refactored_data, $arr['course_title']);
+        }
+        return $refactored_data;
     }
 }

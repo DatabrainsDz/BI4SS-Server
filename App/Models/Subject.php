@@ -86,7 +86,7 @@ class Subject extends Model {
             $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
             $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
             $stmt->bindValue(':semester', $data['semester'], \PDO::PARAM_INT);
-            $stmt->bindValue(':semester2',$data['semester2'], \PDO::PARAM_INT);
+            $stmt->bindValue(':semester2', $data['semester2'], \PDO::PARAM_INT);
             $stmt->execute();
             $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
@@ -118,5 +118,26 @@ class Subject extends Model {
         }
         return $results;
 
+    }
+
+    public static function getSubjects($data)
+    {
+        $result = [];
+
+        try {
+            $db = static::getDB();
+            $stmt = $db->prepare("SELECT course_title FROM course 
+                                            WHERE year = :current_year
+                                            AND scholar_year = :scholar_year
+                                            AND branch_level = :level");
+            $stmt->bindValue(':current_year', $data['current_year'], \PDO::PARAM_STR);
+            $stmt->bindValue(':scholar_year', $data['scholar_year'], \PDO::PARAM_STR);
+            $stmt->bindValue(':level', $data['level'], \PDO::PARAM_STR);
+            $stmt->execute();
+            $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\PDOException $e) {
+            echo $e->getMessage();
+        }
+        return $result;
     }
 }

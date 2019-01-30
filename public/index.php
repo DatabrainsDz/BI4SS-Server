@@ -28,6 +28,8 @@ $router->get('subjects/{year:\d+}', ['controller' => 'Subjects', 'action' => 'al
 // localhost/subjects/associations
 $router->get('subjects/association', ['controller' => 'Subjects', 'action' => 'association']);
 
+$router->get('subjects/info', ['controller' => 'Subjects', 'action' => 'info']);
+
 $router->get('students/auth', ['controller' => 'Students', 'action' => 'auth']);
 
 $url = rtrim($_SERVER['QUERY_STRING'], '/');

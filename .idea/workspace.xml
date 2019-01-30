@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4851fd29-9970-4fed-ab97-19cd9fd3ba8f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/Students.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/Students.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/Subjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/Subjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +34,7 @@
     <session id="-2074798093">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.30" value="1" />
@@ -42,8 +43,9 @@
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.56" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +53,7 @@
           <entry key="htaccess" value="3" />
           <entry key="json" value="4" />
           <entry key="lock" value="1" />
-          <entry key="php" value="272" />
+          <entry key="php" value="285" />
           <entry key="sql" value="1" />
           <entry key="wilaya" value="1" />
           <entry key="xml" value="1" />
@@ -61,7 +63,7 @@
         <counts>
           <entry key="Database Element" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="PHP" value="272" />
+          <entry key="PHP" value="285" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
           <entry key="htaccess" value="3" />
@@ -71,15 +73,15 @@
         <counts>
           <entry key="dummy" value="13" />
           <entry key="htaccess" value="10" />
-          <entry key="php" value="6550" />
+          <entry key="php" value="7431" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="6351" />
+          <entry key="PHP" value="7207" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="SQL" value="199" />
+          <entry key="SQL" value="224" />
           <entry key="htaccess" value="10" />
         </counts>
       </usages-collector>
@@ -96,12 +98,15 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Controllers/Students.php">
+        <entry file="file://$PROJECT_DIR$/App/Controllers/Subjects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="525">
+              <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
               <folding>
-                <element signature="e#35#58#0#PHP" expanded="true" />
+                <element signature="e#36#59#0#PHP" expanded="true" />
+                <element signature="e#1709#2139#0#PHP" />
+                <element signature="e#2145#2729#0#PHP" />
+                <element signature="e#2736#3283#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -156,11 +161,12 @@
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/App/Controllers/AdmittedAdjourned.php" />
         <option value="$PROJECT_DIR$/App/Controllers/Users.php" />
+        <option value="$PROJECT_DIR$/App/Models/Student.php" />
+        <option value="$PROJECT_DIR$/App/Controllers/Students.php" />
+        <option value="$PROJECT_DIR$/App/Views/Years/all.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/App/Models/Subject.php" />
         <option value="$PROJECT_DIR$/App/Controllers/Subjects.php" />
-        <option value="$PROJECT_DIR$/App/Models/Student.php" />
-        <option value="$PROJECT_DIR$/App/Controllers/Students.php" />
       </list>
     </option>
   </component>
@@ -240,6 +246,19 @@
             <path>
               <item name="databrains" type="b2602c69:ProjectViewProjectNode" />
               <item name="databrains" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="databrains" type="b2602c69:ProjectViewProjectNode" />
+              <item name="databrains" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="Years" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="databrains" type="b2602c69:ProjectViewProjectNode" />
+              <item name="databrains" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -312,12 +331,13 @@
       <workItem from="1547385831214" duration="5262000" />
       <workItem from="1547498310027" duration="4188000" />
       <workItem from="1548667202968" duration="6434000" />
-      <workItem from="1548688183185" duration="1631000" />
+      <workItem from="1548688183185" duration="1885000" />
+      <workItem from="1548752281690" duration="3813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74122000" />
+    <option name="totallyTimeSpent" value="78189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,10 +350,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24158126" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.24158126" />
       <window_info id="Structure" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.329653" />
       <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
@@ -435,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Views/Years/all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -519,30 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="28" column="80" lean-forward="true" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Models/Subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controllers/Subjects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="77" selection-end-column="49" />
-          <folding>
-            <element signature="e#36#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Models/Student.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -556,6 +544,44 @@
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="e#35#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Views/Years/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Models/Subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="136" column="57" lean-forward="true" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+          <folding>
+            <element signature="e#84#1808#0#PHP" />
+            <element signature="e#1814#3452#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controllers/Subjects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+          <folding>
+            <element signature="e#36#59#0#PHP" expanded="true" />
+            <element signature="e#1709#2139#0#PHP" />
+            <element signature="e#2145#2729#0#PHP" />
+            <element signature="e#2736#3283#0#PHP" />
           </folding>
         </state>
       </provider>
